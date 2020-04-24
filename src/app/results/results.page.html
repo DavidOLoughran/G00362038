@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Quiz Results</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- Page for displaying Quiz Score, Questions and Answers and if they answered the question correctly-->
+<ion-content [fullscreen]="true">
+  <h3  id="score">{{correctCount}}/6 Answered Correctly</h3>
+
+  <h4 id="score">Question 1:What distance should you keep between you and others?</h4>
+  <p id="score">{{result1}}: 2 Meters is the distcance you should keep between you and others. </p>
+
+  <h4 id="score">Question 2:Minimum time to spend washing hands?</h4>
+  <p id="score">{{result2}}: 20 Seconds is the minimum amount of time to spend washing hands to help prevent spread of COVID19. </p>
+
+  <h4 id="score">Question 3:How long should you self isolate if you start experiencing symptoms??</h4>
+  <p id="score">{{result3}}: 14 Days is the reccomended amount of days to self isolate. </p>
+
+  <h4 id="score">Question 4:Which is not considered a direct symptom of COVID19?</h4>
+  <p id="score">{{result4}}: Sneezing is not considered a direct symptom, Look out for Coughing, Fever and Shortness of Breath </p>
+
+  <h4 id="score">Question 5:What should you do if you experience Symptoms?</h4>
+  <p id="score">{{result5}}: Call an experienced health professional to guide you in the right direction </p>
+
+  <h4 id="score">Question 6:What date are people advised to stay at home wherever possible?</h4>
+  <p id="score">{{result6}}: Until Tuesday 5 May, everyone should stay home wherever possible </p>
+  <!-- Navigations buttons back to Home and to Re-Attempt Quiz -->
+  <div id="buttonContainer">
+    <ion-button [routerLink]="['/home']" routerDirection="forward"  id="button1" >Home</ion-button>
+    <ion-button [routerLink]="['/quiz']" routerDirection="forward"  id="button2">Try Again</ion-button>
+  </div>
+
+</ion-content>

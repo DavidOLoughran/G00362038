@@ -1,0 +1,196 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align:center" >COVID19 Safety Quiz</ion-title>
+  </ion-toolbar>
+</ion-header>
+<!-- Radio Group with list of Questions and answers-->
+<ion-content>
+  <ion-list>
+    <ion-radio-group [(ngModel)]="question1">
+      <ion-list-header>
+        <ion-label>
+          What distance shoud you keep between you and others?
+        </ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>1 Meters</ion-label>
+        <ion-radio value="Incorrect Answer1"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>1.5 Meters</ion-label>
+        <ion-radio value="Incorrect3"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>2 Meters</ion-label>
+        <ion-radio value="Correct"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>3 Meters</ion-label>
+        <ion-radio value="Incorrect1"></ion-radio>
+      </ion-item>
+  
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="question2">
+      <ion-list-header>
+        <ion-label>
+          Minimum time to spend washing hands??
+        </ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>20 Seconds</ion-label>
+        <ion-radio value="Correct"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>5 Seconds</ion-label>
+        <ion-radio value="Incorrect3"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>60 Seconds</ion-label>
+        <ion-radio value="Incorrect1"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Don't Wash Hands</ion-label>
+        <ion-radio value="Incorrect2"></ion-radio>
+      </ion-item>
+  
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="question3">
+      <ion-list-header>
+        <ion-label>
+          How long should you self isolate if you start experiencing symptoms?
+        </ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>14 Days</ion-label>
+        <ion-radio value="Correct"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>1 Month</ion-label>
+        <ion-radio value="Incorrect3"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>3 Days</ion-label>
+        <ion-radio value="Incorrect1"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>7 Days</ion-label>
+        <ion-radio value="Incorrect2"></ion-radio>
+      </ion-item>
+  
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="question4">
+      <ion-list-header>
+        <ion-label>
+          Which is not considered a direct symptom of COVID19??
+        </ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Coughing</ion-label>
+        <ion-radio value="InCorrect2"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Fever</ion-label>
+        <ion-radio value="Incorrect3"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Shortness of Breath </ion-label>
+        <ion-radio value="Incorrect1"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Sneezing</ion-label>
+        <ion-radio value="Correct"></ion-radio>
+      </ion-item>
+  
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="question5">
+      <ion-list-header>
+        <ion-label>
+          What should you do if you experience Symptoms?
+        </ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Go to your local GP</ion-label>
+        <ion-radio value="InCorrect2"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Do Nothing</ion-label>
+        <ion-radio value="Incorrect3"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Call a health specialist for advice</ion-label>
+        <ion-radio value="Correct"></ion-radio>
+      </ion-item>
+  
+  
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="question6">
+      <ion-list-header>
+        <ion-label>
+          What date are people advised to stay at home wherever possible??
+        </ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>5 May</ion-label>
+        <ion-radio value="Correct"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>April 22</ion-label>
+        <ion-radio value="Incorrect3"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>September 23</ion-label>
+        <ion-radio value="Incorrect1"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>1 May</ion-label>
+        <ion-radio value="Incorrect2"></ion-radio>
+      </ion-item>
+  
+    </ion-radio-group>
+  </ion-list>
+  <!-- Starts Function when buttons clicked to check answers and store values for Results Page-->
+  <ion-button  id="homeButtons"  expand="block" (click)="onCheckAnswers()" [routerLink]="['/results']" routerDirection="forward">Check Answers</ion-button>
+
+
+</ion-content>

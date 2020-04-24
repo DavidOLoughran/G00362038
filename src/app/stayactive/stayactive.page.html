@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align:center" >Stay Active</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="centerText">
+    <h1>Push/Sit Up Challenge</h1>
+    <p>Test how many push-ups / sit-ups you can do before the timer runs out</p>
+    <p>More challenges coming soon</p>
+    <h1>{{time | async}}</h1>
+  </div>
+  <!-- Assigns lenght of Timer using buttons-->
+  <div id="buttonContainer">
+    <ion-button id="button1" (click)="start(0.34)">20secs</ion-button>
+    <ion-button id="button1" (click)="start(1)">1min</ion-button>
+    <ion-button id="button1" (click)="start(3)">3min</ion-button>
+  </div>
+    <ion-list>
+      <ion-radio-group [(ngModel)]="timeframe">
+        <ion-list-header>
+          <ion-label>
+            Pick which personal best you would like to update
+          </ion-label>
+        </ion-list-header>
+        <!-- Radio Groups for selcting which timeframe for Personal bests -->
+        <ion-item>
+          <ion-label>20 Seconds</ion-label>
+          <ion-radio value="20"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>1 Minute</ion-label>
+          <ion-radio value="1"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>3 Minutes</ion-label>
+          <ion-radio value="3"></ion-radio>
+        </ion-item>
+        
+        <ion-input placeholder="Enter amount of pushups" type="number" [(ngModel)]="update" ></ion-input>
+    
+      </ion-radio-group>
+    </ion-list>
+    <!--Buttons when clicked start function that updates Personal best scores in chhallenge -->
+    <div id="buttonContainer">
+      <ion-button  id="Button2"  (click)="updatePBp()">Push Ups</ion-button>
+      <ion-button  id="Button2"  (click)="updatePBs()">Sit Ups</ion-button>
+    </div>
+    
+    <br>
+    
+    <ul id="listdiv">
+      <li>{{amountPushups20}}</li>
+      <li>{{amountPushups1}}</li>
+      <li>{{amountPushups3}}</li>
+    </ul>
+
+    <ul>
+      <!-- Grabs Values for Pushups and Situps, Lists and Float CSS used to Format  -->
+      
+      <li *ngFor= "let pbp of pushups">Your PB for {{pbp.time}} {{pbp.workout1}}</li>
+    </ul>
+    <ul id="listdiv">
+      <li>{{amountSitups20}}</li>
+      <li>{{amountSitups1}}</li>
+      <li>{{amountSitups3}}</li>
+    </ul>
+  
+    
+    <ul>
+      <br>
+      <li style="list-style-type:none" ></li>
+      <li *ngFor= "let pbs of pushups">Your PB for {{pbs.time}} {{pbs.workout2}}</li>
+    </ul>
+  
+  
+    
+    
+
+  
+  
+
+</ion-content>

@@ -1,0 +1,71 @@
+#container {
+    text-align: center;
+    background-color: lightcoral;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+ 
+  #score {
+    padding: 10px;
+
+  } 
+
+  #resultButtons {
+    text-align: center;
+    margin-top: 10px;
+    font-size: large;
+    height: 100px;
+  }
+  
+  #title {
+    text-decoration: none;
+    text-align: center;
+    padding: 30px;
+  }
+  
+#button1{
+    width: 80px;
+    height: 40px;
+    margin: 20px;
+}
+#button2{
+    width: 170px;
+    height: 40px;
+    margin: 20px;
+}
+#buttonContainer{
+    text-align: center;
+}
+
+#listdiv{
+    list-style: none;
+    margin-right: 50px;
+    float: right;
+}
+
+#centerText{
+    text-align: center;
+
+  }
